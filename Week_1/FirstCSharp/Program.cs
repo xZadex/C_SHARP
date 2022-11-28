@@ -83,3 +83,11 @@ int numberOne = -2;
 Dictionary<string,string> profile = new Dictionary<string, string>();
 profile.Add("Name","Nick");
 Console.WriteLine(profile["Name"]);
+
+// Functions
+static string SayHello()
+{
+    return "Hey!";
+}
+
+Console.WriteLine(SayHello());
