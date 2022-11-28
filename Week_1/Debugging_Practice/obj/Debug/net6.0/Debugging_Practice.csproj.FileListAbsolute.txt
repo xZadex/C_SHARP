@@ -1,0 +1,15 @@
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.csproj.AssemblyReference.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.AssemblyInfoInputs.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.AssemblyInfo.cs
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.csproj.CoreCompileInputs.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\bin\Debug\net6.0\Debugging_Practice.exe
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\bin\Debug\net6.0\Debugging_Practice.deps.json
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\bin\Debug\net6.0\Debugging_Practice.runtimeconfig.json
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\bin\Debug\net6.0\Debugging_Practice.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\bin\Debug\net6.0\Debugging_Practice.pdb
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\refint\Debugging_Practice.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.pdb
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\Debugging_Practice.genruntimeconfig.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Debugging_Practice\obj\Debug\net6.0\ref\Debugging_Practice.dll
