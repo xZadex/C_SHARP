@@ -73,8 +73,13 @@ int numberOne = -2;
 //     j++;
 // }
 
-Random rand = new Random();
-for(int k = 1; k <= 10; k++)
-{
-    Console.WriteLine(rand.Next(1, 100));
-}
+// Random rand = new Random();
+// for(int k = 1; k <= 10; k++)
+// {
+//     Console.WriteLine(rand.Next(1, 100));
+// }
+
+// Dictionary
+Dictionary<string,string> profile = new Dictionary<string, string>();
+profile.Add("Name","Nick");
+Console.WriteLine(profile["Name"]);
