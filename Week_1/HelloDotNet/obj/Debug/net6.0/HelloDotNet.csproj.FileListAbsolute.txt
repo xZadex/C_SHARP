@@ -1,0 +1,15 @@
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\bin\Debug\net6.0\HelloDotNet.exe
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\bin\Debug\net6.0\HelloDotNet.deps.json
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\bin\Debug\net6.0\HelloDotNet.runtimeconfig.json
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\bin\Debug\net6.0\HelloDotNet.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\bin\Debug\net6.0\HelloDotNet.pdb
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.csproj.AssemblyReference.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.AssemblyInfoInputs.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.AssemblyInfo.cs
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.csproj.CoreCompileInputs.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\refint\HelloDotNet.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.pdb
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\HelloDotNet.genruntimeconfig.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\HelloDotNet\obj\Debug\net6.0\ref\HelloDotNet.dll
