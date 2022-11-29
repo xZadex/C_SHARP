@@ -112,9 +112,13 @@ int numberOne = -2;
 // }
 
 // Convert
-string aNumber = "7";
-int converted = Convert.ToInt32(aNumber);
-Console.WriteLine(14 + converted); // should print 21
-string aDecimal = "3.14";
-double convertDec = Convert.ToDouble(aDecimal);
-Console.WriteLine(1.8 + convertDec); // should print 4.94
+// string aNumber = "7";
+// int converted = Convert.ToInt32(aNumber);
+// Console.WriteLine(14 + converted); // should print 21
+// string aDecimal = "3.14";
+// double convertDec = Convert.ToDouble(aDecimal);
+// Console.WriteLine(1.8 + convertDec); // should print 4.94
+
+// Classes
+Dog Harley = new Dog("Harley","French Bulldog","Dark Gray");
+Console.WriteLine(Harley._Name);
