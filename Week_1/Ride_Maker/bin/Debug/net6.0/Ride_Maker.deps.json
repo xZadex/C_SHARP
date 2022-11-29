@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Ride_Maker/1.0.0": {
+        "runtime": {
+          "Ride_Maker.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Ride_Maker/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
