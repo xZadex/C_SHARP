@@ -42,6 +42,57 @@ class SinglyLinkedList {
     }
 
     /**
+     * Creates a new node with the given data and inserts that node at the front
+     * of this list.
+     * - Time: (?).
+     * - Space: (?).
+     * @param {any} data The data for the new node.
+     * @returns {SinglyLinkedList} This list.
+    */
+    insertAtFront(data) {
+        let newHead = new ListNode(data);
+        newHead.next = this.head;
+        this.head = newHead;
+        return this;
+    }
+
+    /**
+      * Removes the first node of this list.
+      * - Time: (?).
+      * - Space: (?).
+      * @returns {any} The data from the removed node.
+     */
+    removeHead() {
+        if(this.isEmpty()){
+            return null
+        }
+        let prevHead = this.head;
+        this.head = prevHead.next;
+        return prevHead.data;
+    }
+
+     // EXTRA
+    /**
+      * Calculates the average of this list.
+      * - Time: (?).
+      * - Space: (?).
+      * @returns {number|NaN} The average of the node's data.
+     */
+    average() {
+        if(this.isEmpty()){
+            return NaN;
+        }
+        let runner = this.head;
+        let sum = 0;
+        let count = 0;
+        while(runner){
+            sum += runner.data;
+            runner = runner.next;
+            count++;
+        }
+        return sum / count;
+    }
+    /**
      * Determines if this list is empty.
      * - Time: O(?).
      * - Space: O(?).
@@ -50,6 +101,8 @@ class SinglyLinkedList {
     isEmpty() {
         return this.head? true:false
     }
+
+
 
     /**
      * Creates a new node with the given data and inserts it at the back of
@@ -106,14 +159,19 @@ class SinglyLinkedList {
 }
 
 /******************************************************************* 
- Multiple test lists already constructed to test your methods on.
+Multiple test lists already constructed to test your methods on.
 Below commented code depends on insertAtBack method to be completed,
 after completing it, uncomment the code.
 */
 const emptyList = new SinglyLinkedList();
 
 // const singleNodeList = new SinglyLinkedList().insertAtBackMany([1]);
-// const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
+// const singleNodeList = new SinglyLinkedList().average();
+const biNodeList = new SinglyLinkedList().insertAtBackMany([1, 2]);
+console.log(biNodeList);
+console.log(biNodeList.average());
+console.log(biNodeList.insertAtFront([1]));
+console.log(biNodeList.removeHead());
 // const firstThreeList = new SinglyLinkedList().insertAtBackMany([1, 2, 3]);
 // const secondThreeList = new SinglyLinkedList().insertAtBackMany([4, 5, 6]);
 // const unorderedList = new SinglyLinkedList().insertAtBackMany([
