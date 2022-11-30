@@ -6,6 +6,6 @@ List<Drink> DrinkList = new List<Drink>(){Coke,Espresso,RedWine};
 RedWine.ShowDrink();
 
 //Bonus
-Coffee MyDrink = new Soda("Pepsi",false,"Brown",42.22,201);
+// Coffee MyDrink = new Soda("Pepsi",false,"Brown",42.22,201);
 // initially it complained about not having arguments passed in
 // after providing arguments it states you cannot implicitly convert type 'Soda' to 'Coffee'
