@@ -21,3 +21,4 @@ C:\Users\gibso\Desktop\C_SHARP\Week_1\FirstWeb\obj\Debug\net6.0\FirstWeb.genrunt
 C:\Users\gibso\Desktop\C_SHARP\Week_1\FirstWeb\obj\Debug\net6.0\ref\FirstWeb.dll
 C:\Users\gibso\Desktop\C_SHARP\Week_1\FirstWeb\obj\Debug\net6.0\FirstWeb.RazorAssemblyInfo.cache
 C:\Users\gibso\Desktop\C_SHARP\Week_1\FirstWeb\obj\Debug\net6.0\FirstWeb.RazorAssemblyInfo.cs
+C:\Users\gibso\Desktop\C_SHARP\Week_1\FirstWeb\bin\Debug\net6.0\FirstWeb.staticwebassets.runtime.json

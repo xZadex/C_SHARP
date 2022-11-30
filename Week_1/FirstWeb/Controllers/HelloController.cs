@@ -29,4 +29,18 @@ public class HelloController : Controller
     {
         return $"This is user {id}";
     }
+
+    [HttpPost("process")]
+    public IActionResult Process(string Name)
+    {
+        if(Name == "Nick")
+        {
+            ViewBag.Error = "This is taken, Try again";
+            ViewBag.Name = "Nicholas";
+            ViewBag.Number = 7;
+            return View("Index");
+        }
+        Console.WriteLine(Name);
+        return RedirectToAction("Index");
+    }
 }

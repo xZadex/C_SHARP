@@ -5,14 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    @* <link rel="stylesheet" href="~/css/style.css"> *@
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
 </head>
-<body>
-    <h1>Hello @ViewBag.Name, from the view file!</h1>
+<body class="text-center d-flex flex-column justify-content-center align-items-center bg-dark">
+    <h1 class="text-light mt-5 mb-5">Hello @ViewBag.Name, from the view file!</h1>
     @{
         for(int i = 0;i < @ViewBag.Number;i++)
         {
-            <p>This is a number @i </p>
+            <p class="text-light">This is a number @i </p>
         }
     }
+
+    <form action="process" method="POST">
+        <div class="form-group">
+            <label for="Name" class="text-light">Name:</label>
+            <input type="text" name="name" class="form-control">
+            <span>@{
+                if(ViewBag.Error == null)
+                {
+                    <p></p>
+                } else {
+                    <p class="text-danger">@ViewBag.Error</p>
+                }
+            }
+            </span>
+        </div>
+        <button type="submit" class="btn btn-outline-primary">Submit</button>
+    </form>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
 </html>
+
