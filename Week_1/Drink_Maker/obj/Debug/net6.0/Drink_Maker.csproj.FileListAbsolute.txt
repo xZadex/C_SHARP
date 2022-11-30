@@ -1,0 +1,15 @@
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.csproj.AssemblyReference.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.AssemblyInfoInputs.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.AssemblyInfo.cs
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.csproj.CoreCompileInputs.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\bin\Debug\net6.0\Drink_Maker.exe
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\bin\Debug\net6.0\Drink_Maker.deps.json
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\bin\Debug\net6.0\Drink_Maker.runtimeconfig.json
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\bin\Debug\net6.0\Drink_Maker.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\bin\Debug\net6.0\Drink_Maker.pdb
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\refint\Drink_Maker.dll
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.pdb
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\Drink_Maker.genruntimeconfig.cache
+C:\Users\gibso\Desktop\C_SHARP\Week_1\Drink_Maker\obj\Debug\net6.0\ref\Drink_Maker.dll
