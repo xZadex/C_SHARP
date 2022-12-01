@@ -8,13 +8,13 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = Countdown
 build_property.RootNamespace = Countdown
-build_property.ProjectDir = C:\Users\gibso\Desktop\C_SHARP\Week_1\Countdown\
+build_property.ProjectDir = c:\Users\gibso\Desktop\C_SHARP\Week_1\Countdown\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\gibso\Desktop\C_SHARP\Week_1\Countdown
+build_property.MSBuildProjectDirectory = c:\Users\gibso\Desktop\C_SHARP\Week_1\Countdown
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/gibso/Desktop/C_SHARP/Week_1/Countdown/Views/Countdown/Index.cshtml]
+[c:/Users/gibso/Desktop/C_SHARP/Week_1/Countdown/Views/Countdown/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ291bnRkb3duXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

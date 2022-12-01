@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Portfolio.csproj",
+  "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio2\\Portfolio2.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,20 +16295,20 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "Portfolio",
+  "RootNamespace": "Portfolio2",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Views\\Portfolio\\Projects.cshtml",
-      "TargetPath": "Views\\Portfolio\\Projects.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Views\\Portfolio\\Contact.cshtml",
+      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio2\\Views\\Portfolio\\Contact.cshtml",
       "TargetPath": "Views\\Portfolio\\Contact.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Views\\Portfolio\\Index.cshtml",
+      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio2\\Views\\Portfolio\\Projects.cshtml",
+      "TargetPath": "Views\\Portfolio\\Projects.cshtml",
+      "FileKind": "mvc"
+    },
+    {
+      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio2\\Views\\Portfolio\\Index.cshtml",
       "TargetPath": "Views\\Portfolio\\Index.cshtml",
       "FileKind": "mvc"
     }

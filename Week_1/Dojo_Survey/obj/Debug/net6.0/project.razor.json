@@ -1,5 +1,5 @@
 {
-  "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Portfolio.csproj",
+  "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Dojo_Survey\\Dojo_Survey.csproj",
   "Configuration": {
     "ConfigurationName": "MVC-3.0",
     "LanguageVersion": "6.0",
@@ -16295,21 +16295,16 @@
     ],
     "CSharpLanguageVersion": 1000
   },
-  "RootNamespace": "Portfolio",
+  "RootNamespace": "Dojo_Survey",
   "Documents": [
     {
-      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Views\\Portfolio\\Projects.cshtml",
-      "TargetPath": "Views\\Portfolio\\Projects.cshtml",
+      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Dojo_Survey\\Views\\Dojo\\Index.cshtml",
+      "TargetPath": "Views\\Dojo\\Index.cshtml",
       "FileKind": "mvc"
     },
     {
-      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Views\\Portfolio\\Contact.cshtml",
-      "TargetPath": "Views\\Portfolio\\Contact.cshtml",
-      "FileKind": "mvc"
-    },
-    {
-      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Portfolio\\Views\\Portfolio\\Index.cshtml",
-      "TargetPath": "Views\\Portfolio\\Index.cshtml",
+      "FilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\Dojo_Survey\\Views\\Dojo\\Result.cshtml",
+      "TargetPath": "Views\\Dojo\\Result.cshtml",
       "FileKind": "mvc"
     }
   ],
