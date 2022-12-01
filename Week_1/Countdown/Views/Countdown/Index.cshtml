@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="~/css/style.css">
+</head>
+<body>
+    <main>
+        <div class="start-end-container">
+            <div class="start-container">
+                <h3>Start Time</h3>
+                @{string[] months = {"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};}
+                @{DateTime now = DateTime.Now;}
+                <p>@months[now.Month - 1] @now.Day,@now.Year</p>
+                <p>@now.Hour:@now.Minute @now.ToString("tt")</p>
+            </div>
+            <div class="end-container">
+                @{DateTime endDate = new DateTime(2022, 12,25,7,0,00);}
+                <h3>End Time</h3>
+                <p>@months[endDate.Month - 1] @endDate.Day,@endDate.Year</p>
+                <p>7:00 AM</p>
+            </div>
+        </div>
+        <div class="time-remaining-container">
+            @{TimeSpan t = endDate - now;}
+            <h3>Time Remaining</h3>
+            <p>@t.Days Day(s),@t.Hours Hour(s),@t.Minutes Minute(s)</p>
+            <p>Remaining</p>
+        </div>
+    </main>
+</body>
+</html>
