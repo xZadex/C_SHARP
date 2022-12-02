@@ -1,0 +1,48 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+<div class="form-container col-5">
+    <form action="process" method="POST">
+        <div class="form-group">
+            <span>@{
+                    if (ViewBag.Error == null)
+                    {
+                        <p></p>
+                    }
+                    else
+                    {
+                        <p class="text-danger">@ViewBag.Error</p>
+                    }
+                }
+            </span>
+            <label class="text-light" for="Name">Your Name:</label>
+            <input type="text" name="Name" class="form-control">
+        </div>
+        <div class="form-group">
+            <label class="text-light" for="Location">Dojo Location:</label>
+            <select name="Location" class="form-control">
+                <option value="Orlando">Orlando</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Boston">Boston</option>
+                <option value="Seattle">Seattle</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="text-light" for="Language">Favorite Language:</label>
+            <select name="Language" class="form-control">
+                <option value="C#">C#</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label class="text-light" for="Comment">Comment (optional):</label>
+            <textarea name="Comment" id="" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-outline-warning">Submit</button>
+        </div>
+    </form>
+</div>
+
