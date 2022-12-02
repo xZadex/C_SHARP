@@ -1,0 +1,12 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Form
+<div class="text-center">
+    <form asp-action="process" asp-controller="Home" method="post">
+        <span asp-validation-for="Date" class="text-danger"></span><br>
+        <label asp-for="Date">Enter a date:</label>
+        <input asp-for="Date">
+        <button type="submit">Submit</button>
+    </form>
+</div>
