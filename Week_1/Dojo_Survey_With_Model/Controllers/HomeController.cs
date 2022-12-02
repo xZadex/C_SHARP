@@ -8,7 +8,7 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
 
-    static Survey mySurvey;
+    static Survey? mySurvey;
     public HomeController(ILogger<HomeController> logger)
     {
         _logger = logger;

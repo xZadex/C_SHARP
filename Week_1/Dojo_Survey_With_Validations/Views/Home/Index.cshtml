@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+@model Survey
+<div class="form-container col-5">
+    <form asp-action="process" asp-controller="Home" method="POST">
+        <div class="form-group">
+            <span asp-validation-for="Name" class="text-danger"></span><br>
+            <label class="text-light" asp-for="Name">Your Name:</label>
+            <input asp-for="Name" class="form-control">
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Location" class="text-danger"></span><br>
+            <label class="text-light" asp-for="Location">Dojo Location:</label>
+            <select asp-for="Location" class="form-control">
+                <option selected disabled hidden>Select a location</option>
+                <option value="Orlando">Orlando</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Boston">Boston</option>
+                <option value="Seattle">Seattle</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Language" class="text-danger"></span><br>
+            <label class="text-light" asp-for="Language">Favorite Language:</label>
+            <select asp-for="Language" class="form-control">
+                <option selected disabled hidden>Select a language</option>
+                <option value="C#">C#</option>
+                <option value="Python">Python</option>
+                <option value="JavaScript">JavaScript</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <span asp-validation-for="Comment" class="text-danger"></span><br>
+            <label class="text-light" asp-for="Comment">Comment (optional):</label>
+            <textarea asp-for="Comment" id="" cols="30" rows="10" class="form-control"></textarea>
+        </div>
+        <div class="d-flex justify-content-end mt-3">
+            <button type="submit" class="btn btn-outline-warning">Submit</button>
+        </div>
+    </form>
+</div>
