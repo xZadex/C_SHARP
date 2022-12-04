@@ -6,6 +6,7 @@ namespace Form_Submission.Controllers;
 
 public class HomeController : Controller
 {
+    static Survey? mySurvey;
     private readonly ILogger<HomeController> _logger;
 
     public HomeController(ILogger<HomeController> logger)
@@ -13,15 +14,32 @@ public class HomeController : Controller
         _logger = logger;
     }
 
+    [HttpGet("")]
     public IActionResult Index()
     {
         return View();
     }
 
-    public IActionResult Privacy()
+    [HttpGet("success")]
+    public IActionResult Success()
     {
         return View();
     }
+
+    [HttpPost("process")]
+    public IActionResult Process(Survey newSurvey)
+    {
+        if(ModelState.IsValid)
+        {
+            mySurvey = newSurvey;
+            return RedirectToAction("Success");
+        }
+        else
+        {
+            return View("Index");
+        }
+    }
+
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
