@@ -13,11 +13,13 @@ public class Survey
     public string Email{get;set;}
 
     [Required]
+    [DataType(DataType.Date)]
     [FutureDate]
 
     public DateTime Birthday{get;set;}
 
     [Required]
+    [DataType(DataType.Password)]
     [MinLength(8,ErrorMessage = "Password must be at least 8 characters.")]
     public string password{get;set;}
 
@@ -33,7 +35,7 @@ public class FutureDateAttribute : ValidationAttribute
         if (((DateTime?)value) > DateTime.Today)
         {        
             // we return an error message in ValidationResult we want to render    
-            return new ValidationResult("Provided an earlier date");   
+            return new ValidationResult("Provide an earlier date");   
         } else { 
             // Otherwise, we were successful and can report our success  
             return ValidationResult.Success;  
