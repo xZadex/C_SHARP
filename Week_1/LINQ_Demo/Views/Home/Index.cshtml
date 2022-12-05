@@ -1,0 +1,61 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1>All PC Games</h1>    
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+        </tr>
+        @foreach(Game g in ViewBag.AllPCGames)
+        {
+            <tr>
+                <td>@g.Title</td>
+                <td>@g.Price.ToString("C")</td>
+                <td>@g.Genre</td>
+            </tr>
+        }
+    </table>
+
+    <h1>Top 3 Free Games</h1>    
+    <table class="table table-striped">
+        <tr>
+            <th>Title</th>
+            <th>Price</th>
+            <th>Genre</th>
+        </tr>
+        @foreach(Game g in ViewBag.TopFree)
+        {
+            <tr>
+                <td>@g.Title</td>
+                <td>@g.Price.ToString("C")</td>
+                <td>@g.Genre</td>
+            </tr>
+        }
+    </table>
+
+    <h2>The most expensive game costs: @ViewBag.MostExpensive.ToString("C")</h2>
+    <h2 class="mt-5">Nick plays too much @ViewBag.RS.Title</h2>
+    <h2>The sum of all the games is: @ViewBag.Total.ToString("C")</h2>
+
+    <ul>
+        @foreach(string name in @ViewBag.AllTitles)
+        {
+            <li><a href="#" target="_blank">@name</a></li>
+        }
+    </ul>
+
+    <h3>Did you find the title?</h3>
+    @{
+        if(@ViewBag.MatchTitle)
+        {
+            <h4>Yes, I found it</h4>
+        } else{
+            <h4>No, I did not find it</h4>
+        }
+    }
+</div>
