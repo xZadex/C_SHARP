@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj": {}
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj": {
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj",
+        "projectUniqueName": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj",
         "projectName": "LINQ_Eruption",
-        "projectPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj",
+        "projectPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\LINQ_Eruption.csproj",
         "packagesPath": "C:\\Users\\gibso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\obj\\",
+        "outputPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_1\\LINQ_Eruption\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gibso\\AppData\\Roaming\\NuGet\\NuGet.Config"

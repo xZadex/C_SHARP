@@ -1,4 +1,5 @@
-﻿List<Eruption> eruptions = new List<Eruption>()
+﻿
+List<Eruption> eruptions = new List<Eruption>()
 {
     new Eruption("La Palma", 2021, "Canary Is", 2426, "Stratovolcano"),
     new Eruption("Villarrica", 1963, "Chile", 2847, "Stratovolcano"),
@@ -69,8 +70,11 @@ Eruption? peakEruption = eruptions.FirstOrDefault(e => e.ElevationInMeters == ma
 // Console.WriteLine($"Volcano: {peakEruption?.Volcano}\nHeight: {peakEruption?.ElevationInMeters}");
 
 // 9
-List<Eruption> orderedAlphabetically =  eruptions.OrderBy(e => e.Volcano).ToList();
-// PrintEach(orderedAlphabetically);
+List<string> orderedAlphabetically =  eruptions.OrderBy(e => e.Volcano).Select(e => e.Volcano).ToList();
+foreach(string i in orderedAlphabetically)
+{
+    Console.WriteLine(i);
+}
 
 // 10
 int totalHeight = eruptions.Sum(e => e.ElevationInMeters);
@@ -97,19 +101,19 @@ List<Eruption> beforeTime = eruptions.Where(e => e.Year < 1000).OrderBy(e => e.V
 
 // 14
 List<string> beforeTime2 = eruptions.Where(e => e.Year < 1000).OrderBy(e => e.Volcano).Select(e => e.Volcano).ToList();
-foreach(string i in beforeTime2)
-{
-    Console.WriteLine(i);
-}
+// foreach(string i in beforeTime2)
+// {
+//     Console.WriteLine(i);
+// }
 
 // Helper method to print each item in a List or IEnumerable. This should remain at the bottom of your class!
-// static void PrintEach(IEnumerable<Eruption> items, string msg = "")
-// {
-//     Console.WriteLine("\n" + msg);
-//     foreach (Eruption item in items)
-//     {
-//         Console.WriteLine(item.ToString());
-//     }
-// }
+static void PrintEach(IEnumerable<Eruption> items, string msg = "")
+{
+    Console.WriteLine("\n" + msg);
+    foreach (Eruption item in items)
+    {
+        Console.WriteLine(item.ToString());
+    }
+}
 
 
