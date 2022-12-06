@@ -107,13 +107,13 @@ List<string> beforeTime2 = eruptions.Where(e => e.Year < 1000).OrderBy(e => e.Vo
 // }
 
 // Helper method to print each item in a List or IEnumerable. This should remain at the bottom of your class!
-static void PrintEach(IEnumerable<Eruption> items, string msg = "")
-{
-    Console.WriteLine("\n" + msg);
-    foreach (Eruption item in items)
-    {
-        Console.WriteLine(item.ToString());
-    }
-}
+// static void PrintEach(IEnumerable<Eruption> items, string msg = "")
+// {
+//     Console.WriteLine("\n" + msg);
+//     foreach (Eruption item in items)
+//     {
+//         Console.WriteLine(item.ToString());
+//     }
+// }
 
 
