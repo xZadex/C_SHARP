@@ -7,7 +7,7 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     // Add a private variable of type MyContext (or whatever you named your context file)
-    private MyContext _context;
+    private PetContext _context;
     // Here we can "inject" our context service into the constructor 
     // The "logger" was something that was already in our code, we're just adding around it   
     public HomeController(ILogger<HomeController> logger, PetContext context)
@@ -22,7 +22,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         // Now any time we want to access our database we use _context   
-        List<Monster> AllMonsters = _context.Monsters.ToList();
+        List<Pet> AllMonsters = _context.Pets.ToList();
         return View();
     }
 

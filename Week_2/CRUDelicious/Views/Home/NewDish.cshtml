@@ -1,0 +1,55 @@
+@{
+    ViewData["Title"] = "New Dish";
+}
+@model Dish
+<nav class="text-center">
+    <h1 class="mt-5">Add a new Dish!</h1>
+    <p class="d-flex justify-content-center gap-2"><a href="/">Home</a> | Add a dish</p>
+</nav>
+<div class="d-flex flex-column align-items-center">
+    <form asp-action="CreateDish" asp-controller="Home" method="post">
+        <div class="d-flex justify-content-around gap-5">
+            <div class="col-4">
+                <div class="d-flex flex-column mb-3">
+                    <label asp-for="Chef">Chef's Name:</label>
+                    <input asp-for="Chef">
+                    <span asp-validation-for="Chef" class="text-danger"></span>
+                </div>
+                <div class="d-flex flex-column mb-3">
+                    <label asp-for="Name">Name of Dish:</label>
+                    <input asp-for="Name">
+                    <span asp-validation-for="Name" class="text-danger"></span>
+                </div>
+                <div class="d-flex flex-column mb-3">
+                    <label asp-for="Calories"># of Calories:</label>
+                    <input asp-for="Calories">
+                    <span asp-validation-for="Calories" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="d-flex flex-column">
+                    <label asp-for="Tastiness">Tastiness:</label>
+                    <select asp-for="Tastiness">
+                        <option value="" selected hidden disabled></option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <span asp-validation-for="Tastiness" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-4">
+                <div class="form-group">
+                    <label asp-for="Description">Description:</label>
+                    <textarea asp-for="Description" cols="26" rows="10"></textarea>
+                    <span asp-validation-for="Description" class="text-danger"></span>
+                </div>
+                <div class="d-flex justify-content-end" style="">
+                    <button type="submit" class="btn btn-outline-secondary">Add Dish</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
