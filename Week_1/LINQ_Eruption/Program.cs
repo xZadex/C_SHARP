@@ -55,7 +55,6 @@ Eruption? after1900 = eruptions.FirstOrDefault(l => l.Year > 1900 && l.Location 
 List<Eruption> highestEruptions = eruptions.Where(e => e.ElevationInMeters > 2000).ToList();
 // PrintEach(highestEruptions);
 
-
 // 6
 List<Eruption> startsL = eruptions.Where(e => e.Volcano.StartsWith("L")).ToList();
 // PrintEach(startsL);
@@ -67,14 +66,14 @@ int maxEruption = eruptions.Max(i => i.ElevationInMeters);
 
 // 8
 Eruption? peakEruption = eruptions.FirstOrDefault(e => e.ElevationInMeters == maxEruption);
-// Console.WriteLine($"Volcano: {peakEruption?.Volcano}\nHeight: {peakEruption?.ElevationInMeters}");
+Console.WriteLine($"Volcano: {peakEruption?.Volcano}\nHeight: {peakEruption?.ElevationInMeters}");
 
 // 9
 List<string> orderedAlphabetically =  eruptions.OrderBy(e => e.Volcano).Select(e => e.Volcano).ToList();
-foreach(string i in orderedAlphabetically)
-{
-    Console.WriteLine(i);
-}
+// foreach(string i in orderedAlphabetically)
+// {
+//     Console.WriteLine(i);
+// }
 
 // 10
 int totalHeight = eruptions.Sum(e => e.ElevationInMeters);

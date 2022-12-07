@@ -1,6 +1,7 @@
 
 public class Eruption
 {
+
     public string Volcano { get; set; }
     public int Year { get; set; }
     public string Location { get; set; }

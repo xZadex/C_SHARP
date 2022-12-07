@@ -6,7 +6,7 @@
 
 <nav class="text-center">
     <h1 class="mt-5">@Model.Name</h1>
-    <p class="d-flex justify-content-center gap-2"><a href="/">Home</a> | <a href="dishes/new">Add a Dish</a></p>
+    <p class="d-flex justify-content-center gap-2"><a href="/">Home</a> | <a asp-action="NewDish">Add a Dish</a></p>
 </nav>
 <div class="d-flex flex-column align-items-center">
     <h2 class="mt-5" style="border-bottom: 2px solid black;">@Model.Name by @Model.Chef</h2>

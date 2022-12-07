@@ -4,7 +4,7 @@
 @model Dish
 <nav class="text-center">
     <h1 class="mt-5">Edit @Model.Name</h1>
-    <p class="d-flex justify-content-center gap-2"><a href="/">Home</a> | <a href="dishes/new">Add a Dish</a></p>
+    <p class="d-flex justify-content-center gap-2"><a href="/">Home</a> | <a asp-action="NewDish">Add a Dish</a></p>
 </nav>
 <div class="d-flex flex-column align-items-center">
     <form asp-action="UpdateDish" asp-controller="Home" asp-route-DishId="@Model.DishId" method="post">
