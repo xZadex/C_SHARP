@@ -22,6 +22,8 @@
             <div class="form-group mb-3">
                 <label asp-for="ChefId">Chef Name:</label>
                 <select asp-for="ChefId" class="form-select">
+                    
+                    <option selected hidden disabled></option>
                     @foreach(Chef i in ViewBag.Chefs)
                     {
                         <option value="@i.ChefId">@i.FirstName @i.LastName</option>
