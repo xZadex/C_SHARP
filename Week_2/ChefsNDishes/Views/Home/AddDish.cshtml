@@ -1,0 +1,46 @@
+@{
+    ViewData["Title"] = "Add Dish Page";
+}
+@model Dish
+<div class="container">
+    <nav class="d-flex justify-content-center align-items-center gap-4 m-5" style="font-size: calc(8px + 1vw);">
+        <a asp-action="Index">Chefs</a> | <a asp-action="Dishes">Dishes</a> | <a asp-action="AddChef">Add a Chef</a> | Add a Dish
+    </nav>
+    <main>
+        <h1 style="border-bottom: 2px solid black;" class="text-center">Add a dish</h1>
+        <form asp-action="CreateDish" asp-controller="Home" method="post" class="col-6 mt-3">
+            <div class="form-group mb-3">
+                <label asp-for="Name">Name:</label>
+                <input asp-for="Name" class="form-control">
+                <span asp-validation-for="Name" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Calories"># of Calories:</label>
+                <input asp-for="Calories" class="form-control">
+                <span asp-validation-for="Calories" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="ChefName">Chef Name:</label>
+                <select asp-for="ChefName" class="form-control">
+                    <option value="">Test</option>
+                </select>
+                <span asp-validation-for="ChefName" class="text-danger"></span>
+            </div>
+            <div class="form-group mb-3">
+                <label asp-for="Tastiness">Tastiness:</label>
+                <select asp-for="Tastiness" class="form-control">
+                    <option selected disabled hidden></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                </select>
+                <span asp-validation-for="Tastiness" class="text-danger"></span>
+            </div>
+            <div>
+                <button type="submit" class="btn btn-outline-primary mt-3">Add Dish</button>
+            </div>
+        </form>
+    </main>
+</div>

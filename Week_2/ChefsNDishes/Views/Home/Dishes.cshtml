@@ -1,0 +1,29 @@
+@{
+    ViewData["Title"] = "Dishes Page";
+} 
+@model List<Dish>
+<div class="container">
+    <nav class="d-flex justify-content-center align-items-center gap-4 m-5" style="font-size: calc(8px + 1vw);">
+        <a asp-action="Index">Chefs</a> | Dishes | <a asp-action="AddChef">Add a Chef</a> | <a asp-action="AddDish">Add a Dish</a>
+    </nav>
+    <main>
+        <h1 style="border-bottom: 2px solid black;" class="text-center">Yum! Check out our tasty dishes!</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Chef</th>
+                <th>Tastiness</th>
+                <th>Calories</th>
+            </tr>
+            @foreach(Dish i in Model)
+            {
+                <tr>
+                    <td>@i.Name</td>
+                    <td>@i.ChefName</td>
+                    <td>@i.Tastiness</td>
+                    <td>@i.Calories</td>
+                </tr>
+            }
+        </table>
+    </main>
+</div>

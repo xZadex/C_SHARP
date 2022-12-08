@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Chefs Page";
+}
+@model List<Chef>
+<div class="container">
+    <nav class="d-flex justify-content-center align-items-center gap-4 m-5" style="font-size: calc(8px + 1vw);">
+        Chefs | <a asp-action="Dishes">Dishes</a> | <a asp-action="AddChef">Add a Chef</a> | <a asp-action="AddDish">Add a Dish</a>
+    </nav>
+    <main>
+        <h1 style="border-bottom: 2px solid black;" class="text-center">Check out our roster of chefs!</h1>
+        <table class="table table-striped">
+            <tr>
+                <th>Name</th>
+                <th>Age</th>
+                <th># of Dishes</th>
+            </tr>
+            @foreach(Chef i in Model)
+            {
+                TimeSpan Age = (@DateTime.Now - @i.Birthday);
+                <tr>
+                    <td>@i.FirstName @i.LastName</td>
+                    <td>@String.Format("{0}", Age.Days/365)</td>
+                    <td>@i.CreatedDishes.Count()</td>
+                </tr>
+            }
+        </table>
+    </main>
+</div>
