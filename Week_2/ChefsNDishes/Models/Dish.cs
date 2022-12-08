@@ -17,9 +17,11 @@ public class Dish
     public int ChefId { get; set; }
 
     [Required]
+    [Range(1,5,ErrorMessage="Must pick an option between 1 and 5")]
     public int Tastiness { get; set; }
 
-    public Chef ChefName { get; set; }
+    // navigation 
+    public Chef? ChefName { get; set; }
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;

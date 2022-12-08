@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using ChefsNDishes.Models;
+using Microsoft.EntityFrameworkCore;
 namespace ChefsNDishes.Controllers;
 public class HomeController : Controller
 {
@@ -31,7 +32,7 @@ public class HomeController : Controller
     public IActionResult Dishes()
     {
         // Now any time we want to access our database we use _context   
-        List<Dish> AllDishes = _context.Dishes.ToList();
+        List<Dish> AllDishes = _context.Dishes.Include(a => a.ChefName).ToList();
         return View(AllDishes);
     }
 
@@ -46,6 +47,8 @@ public class HomeController : Controller
     {
         if(ModelState.IsValid)
         {
+            _context.Add(newChef);
+            _context.SaveChanges();
             return RedirectToAction("Index");
         } else {
             return View("AddChef");
@@ -55,6 +58,8 @@ public class HomeController : Controller
     [HttpGet("dishes/new")]
     public IActionResult AddDish()
     {
+        List<Chef> allChefs = _context.Chefs.ToList();
+        ViewBag.Chefs = allChefs;
         return View();
     }
 
@@ -63,8 +68,12 @@ public class HomeController : Controller
     {
         if(ModelState.IsValid)
         {
-            return RedirectToAction("Index");
+            _context.Add(newDish);
+            _context.SaveChanges();
+            return RedirectToAction("Dishes");
         } else {
+            List<Chef> allChefs = _context.Chefs.ToList();
+            ViewBag.Chefs = allChefs;
             return View("AddDish");
         }
     }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "pHapK162oE3aVG4DKrF+o8vifgSd5IdNWeqoeebid+JUl4rrTuyFLpi5vSl39cIXjUE9OI708syihwXmE8IAvQ==",
+  "dgSpecHash": "LKLoZnaOlPRBb/z8OUBNZjkMI5MRn3jUs+HqGq9AgWWbXX9L5/Rpnla2mYokxYJId2n/lIMXwT4d7vCPu/W+hQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj",
+  "projectFilePath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\gibso\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\gibso\\.nuget\\packages\\microsoft.entityframeworkcore\\6.0.3\\microsoft.entityframeworkcore.6.0.3.nupkg.sha512",

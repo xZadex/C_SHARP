@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj": {}
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj": {
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj",
+        "projectUniqueName": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj",
         "projectName": "ChefsNDishes",
-        "projectPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj",
+        "projectPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\ChefsNDishes.csproj",
         "packagesPath": "C:\\Users\\gibso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\obj\\",
+        "outputPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\ChefsNDishes\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gibso\\AppData\\Roaming\\NuGet\\NuGet.Config"

@@ -20,11 +20,14 @@
                 <span asp-validation-for="Calories" class="text-danger"></span>
             </div>
             <div class="form-group mb-3">
-                <label asp-for="ChefName">Chef Name:</label>
-                <select asp-for="ChefName" class="form-control">
-                    <option value="">Test</option>
+                <label asp-for="ChefId">Chef Name:</label>
+                <select asp-for="ChefId" class="form-select">
+                    @foreach(Chef i in ViewBag.Chefs)
+                    {
+                        <option value="@i.ChefId">@i.FirstName @i.LastName</option>
+                    }
                 </select>
-                <span asp-validation-for="ChefName" class="text-danger"></span>
+                <span asp-validation-for="ChefId" class="text-danger"></span>
             </div>
             <div class="form-group mb-3">
                 <label asp-for="Tastiness">Tastiness:</label>
