@@ -1,7 +1,7 @@
 #pragma warning disable CS8618
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-namespace LoginAndRegDemo.Models;
+namespace WeddingPlanner.Models;
 public class User
 {
     [Key]
@@ -45,7 +45,7 @@ public class UniqueEmailAttribute : ValidationAttribute
             return new ValidationResult("Email is required.");
         }
 
-        MyContext _context = (MyContext)validationContext.GetService(typeof(MyContext));
+        MyContext? _context = (MyContext)validationContext.GetService(typeof(MyContext));
         if(_context.Users.Any(e => e.Email == value.ToString()))
         {
             return new ValidationResult("Email must be unique!");
