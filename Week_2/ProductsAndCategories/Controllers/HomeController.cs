@@ -114,12 +114,20 @@ public class HomeController : Controller
     }
 
 
-    [HttpPost("associations/create")]
+    [HttpPost("associations/categories/create")]
     public IActionResult CreateAssociation(Association newCategoryItem)
     {
             _context.Add(newCategoryItem);
             _context.SaveChanges();
             return RedirectToAction("ShowProduct", new{ProductId = newCategoryItem.ProductId});
+    }
+
+    [HttpPost("associations/products/create")]
+    public IActionResult CreateAssociation2(Association newProductItem)
+    {
+            _context.Add(newProductItem);
+            _context.SaveChanges();
+            return RedirectToAction("ShowCategory", new{CategoryId = newProductItem.CategoryId});
     }
 
 
