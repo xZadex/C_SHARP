@@ -1,0 +1,15 @@
+@model Category
+
+<div class="container" style="max-width: 20em;">
+    <h3 class="mb-4">New Category</h3>
+    <form asp-action="CreateCategory" asp-controller="Home" method="post">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <div class="form-group d-flex justify-content-between mb-3">
+            <label asp-for="Name">Name:</label>
+            <input asp-for="Name">
+        </div>
+        <div class="d-flex">
+            <button type="submit" class="btn btn-outline-secondary">Create</button>
+        </div>
+    </form>
+</div>

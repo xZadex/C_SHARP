@@ -66,7 +66,7 @@ public class HomeController : Controller
         Dish? DishToUpdate = _context.Dishes.FirstOrDefault(d => d.DishId == dishId);
         if(DishToUpdate == null)
         {
-            return RedirectToAction("Index");
+            return View("Index");
         }
         
         if(ModelState.IsValid)

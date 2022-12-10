@@ -1,0 +1,21 @@
+@model Association
+
+<div class="container">
+    <h3 class="mb-4">Add Category</h3>
+    <form asp-action="CreateAssociation" asp-controller="Home" method="post">
+        <div class="form-group d-flex justify-content-between mb-3">
+            <input type="hidden" value="@Model.ProductId" asp-for="ProductId">
+            <span asp-validation-for="CategoryId"></span>
+            <select asp-for="CategoryId" class="form-select">
+                <option selected hidden disabled>Pick a category..</option>
+                @foreach(Category i in ViewBag.AllCategories)
+                {
+                    <option value="@i.CategoryId">@i.Name</option>
+                }
+            </select>
+        </div>
+        <div class="d-flex justify-content-end">
+            <button type="submit" class="btn btn-outline-secondary">Add</button>
+        </div>
+    </form>
+</div>

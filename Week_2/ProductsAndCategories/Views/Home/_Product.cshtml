@@ -1,0 +1,25 @@
+@model Product
+
+<div class="container" style="max-width: 20em;">
+    <h3 class="mb-4">New Product</h3>
+    <form asp-action="CreateProduct" asp-controller="Home" method="post">
+        <span asp-validation-for="Name" class="text-danger"></span>
+        <div class="form-group d-flex justify-content-between mb-3">
+            <label asp-for="Name">Name:</label>
+            <input asp-for="Name">
+        </div>
+        <span asp-validation-for="Description" class="text-danger"></span>
+        <div class="form-group d-flex justify-content-between mb-3">
+            <label asp-for="Description">Description:</label>
+            <input asp-for="Description">
+        </div>
+        <span asp-validation-for="Price" class="text-danger"></span>
+        <div class="form-group d-flex justify-content-between mb-3">
+            <label asp-for="Price">Price:</label>
+            <input asp-for="Price">
+        </div>
+        <div class="d-flex">
+            <button type="submit" class="btn btn-outline-secondary">Create</button>
+        </div>
+    </form>
+</div>

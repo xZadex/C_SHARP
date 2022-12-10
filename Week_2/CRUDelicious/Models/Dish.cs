@@ -5,7 +5,6 @@ public class Dish
 {
     [Key]
 
-    [Required]
     public int DishId { get; set; }
 
     [Required]

@@ -1,0 +1,28 @@
+@{
+    ViewData["Title"] = "Category Page";
+}
+@model MyViewModel
+<div class="text-center">
+    <nav class="d-flex justify-content-center align-items-center mt-5">
+        <ul class="d-flex align-items-center list-unstyled gap-2">
+            <li class="h4" style="width: 100px;"><a asp-action="Index">Products</a></li>
+            <li class="h4" style="width: 10px;">|</li>
+            <li class="h4" style="width: 100px;">Categories</li>
+        </ul>
+    </nav>
+    <main class="d-flex justify-content-center">
+        <div style="min-width: 45%;">
+            @await Html.PartialAsync("_NewCategory", Model.Category)
+        </div>
+        <div style="height: 75vh; background-color: black; width: 2px;"></div>
+        <div style="min-width: 45%;">
+            <h3>All Categories</h3>
+            <ul class="p-0">
+                @foreach(Category item in Model.AllCategories)
+                {
+                    <li class="list-unstyled"><a asp-action="ShowCategory" asp-route-CategoryId="@item.CategoryId">@item.Name</a></li>
+                }
+            </ul>
+        </div>
+    </main>
+</div>
