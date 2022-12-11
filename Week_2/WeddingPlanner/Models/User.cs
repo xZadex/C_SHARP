@@ -31,9 +31,15 @@ public class User
     [Display(Name = "Confirm Password")]
     public string Confirm { get; set; }
 
+    // navigation property
+    public List<Wedding> CreatedWeddings { get; set; } = new List<Wedding>();
+
 
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime UpdatedAt { get; set; } = DateTime.Now;
+
+
+    public List<WeddingAssociation> RSVPWeddingList{get;set;} = new List<WeddingAssociation>();
 }
 
 public class UniqueEmailAttribute : ValidationAttribute

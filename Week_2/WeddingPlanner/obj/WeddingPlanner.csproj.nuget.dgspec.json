@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj": {}
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj": {
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj",
+        "projectUniqueName": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj",
         "projectName": "WeddingPlanner",
-        "projectPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj",
+        "projectPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\WeddingPlanner.csproj",
         "packagesPath": "C:\\Users\\gibso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\obj\\",
+        "outputPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_2\\WeddingPlanner\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gibso\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -39,6 +39,8 @@
           "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.3, )"
             },

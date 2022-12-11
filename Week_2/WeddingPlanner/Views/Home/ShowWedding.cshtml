@@ -1,0 +1,35 @@
+@{
+    ViewData["Title"] = "Plan a Wedding";
+}
+
+@model MyViewModel
+<div class="d-flex justify-content-between align-items-center mt-4">
+    <div>
+        <h3 style="padding: 0; margin: 0;">Welcome @ViewBag.User.FirstName!</h3>
+    </div>
+    <div>
+        <ul class="d-flex gap-2 list-unstyled" style="padding: 0; margin: 0;">
+            <li><a asp-action="Weddings">Home</a></li>
+            <li>|</li>
+            <li><a asp-action="PlanWedding">Plan a Wedding</a></li>
+            <li>|</li>
+            <li>
+                <form asp-action="Logout" asp-controller="Home" method="post">
+                    <input class="logout-link" type="submit" value="Logout" style="border: none; background:none; color:#0D6EFD; text-decoration: underline; padding:0; margin:0;"/>
+                </form>
+            </li>
+        </ul>
+    </div>
+</div>
+<div style="height: 2px; width: 100%; background-color: black; margin-top: 5px;"></div>
+<main>
+    <h1 class="mt-4">@Model.Wedding.WedderOne & @Model.Wedding.WedderTwo's wedding</h1>
+    <h3 class="mt-4">Date: @Model.Wedding.WeddingDate</h3>
+    <h3 class="mt-3">Guests:</h3>
+    <ul class="list-unstyled mx-3" style="border:2px solid black; width: fit-content; padding: .25em 2em .25em .5em;">
+        @foreach(WeddingAssociation i in @Model.Wedding.GuestList)
+        {
+            <li>@i.User.FirstName @i.User.LastName</li>
+        }
+    </ul>
+</main>
