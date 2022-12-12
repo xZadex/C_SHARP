@@ -4,7 +4,7 @@
 @model MyViewModel
 <div class="d-flex justify-content-between align-items-center mt-4">
     <div>
-        <h3 style="padding: 0; margin: 0;">Welcome @ViewBag.User.FirstName!</h3>
+        <h3 style="padding: 0; margin: 0;">Welcome @Context.Session.GetString("UserFirst")!</h3>
     </div>
     <div>
         <ul class="d-flex gap-2 list-unstyled" style="padding: 0; margin: 0;">
@@ -38,7 +38,7 @@
                 {
                     <tr>
                         <td style="border-right: 1px solid black; border-bottom: none; border-top: none;">
-                            <a asp-action="ShowWedding" asp-route-id="@i.WeddingId">@i.WedderOne & @i.WedderTwo</a>
+                            <a asp-action="ShowWedding" asp-route-id="@i.WeddingId" style="text-decoration: none;">@i.WedderOne & @i.WedderTwo</a>
                         </td>
                         <td style="border-right: 1px solid black; border-bottom: none; border-top: none;">
                             @i.WeddingDate.ToString("MMM d, yyyy")
@@ -46,29 +46,34 @@
                         <td style="border-right: 1px solid black; border-bottom: none; border-top: none;">@i.GuestList.Count
                         </td>
                         <td style="border-bottom: none; border-top: none;">
-                            @if (i.CreatorId == @ViewBag.User.UserId)
+                            @if (i.CreatorId == @Context.Session.GetInt32("UserId"))
                             {
                                 <form asp-action="DestroyWedding" asp-controller="Home" asp-route-id="@i.WeddingId" method="post">
-                                    <button style="border:none; background:none; margin:0; padding:0; color: red;">Delete</button>
+                                    <button style="border:none; background:none; margin:0; padding:0; color: red; text-decoration: underline;">Delete</button>
                                 </form>
                             }
                             else
                             {
+                                @* if(i.GuestList.Any(e => e.UserId == @Context.Session.GetInt32("UserId"))) *@
                                 bool inList = false;
-                                foreach (var a in i.GuestList)
+                                foreach (WeddingAssociation association in i.GuestList)
                                 {
-                                    if (a.User.UserId == ViewBag.User.UserId)
+                                    if (association.User.UserId == @Context.Session.GetInt32("UserId"))
                                     {
                                         inList = true;
                                     }
                                 }
                                 if (inList == true)
                                 {
-                                    <a asp-action="UNRSVP" asp-route-id="@i.WeddingId">Un-RSVP</a>
+                                    <form asp-action="UNRSVP" asp-controller="Home" asp-route-id="@i.WeddingId" method="post">
+                                        <button style="border:none; background:none; margin:0; padding:0; color: rgb(0,0,0); text-decoration:underline;">Un-RSVP</button>
+                                    </form>
                                 }
                                 else
                                 {
-                                    <a asp-action="RSVP" asp-route-id="@i.WeddingId">RSVP</a>
+                                    <form asp-action="RSVP" asp-controller="Home" asp-route-id="@i.WeddingId" method="post">
+                                        <button style="border:none; background:none; margin:0; padding:0; color:#0D6EFD; text-decoration:underline;">RSVP</button>
+                                    </form>
                                 }
                             }
                         </td>

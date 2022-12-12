@@ -6,12 +6,12 @@ public class WeddingAssociation
     [Key]    
     public int WeddingAssociationId { get; set; } 
     
-    // The IDs linking to the adjoining tables   
+    // ids   
     public int UserId { get; set; }    
     public int WeddingId { get; set; }
 
 
-    // Our navigation properties - don't forget the ?    
+    // navigation
     public User? User { get; set; }    
     public Wedding? Wedding { get; set; }
 }

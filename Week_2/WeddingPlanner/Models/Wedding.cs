@@ -39,7 +39,7 @@ public class Wedding
 public class PastDateAttribute : ValidationAttribute
 {    
     protected override ValidationResult IsValid(object value, ValidationContext validationContext)    
-    {       
+    {   
         if (((DateTime)value) < DateTime.Today)
         {        
             // we return an error message in ValidationResult we want to render    
