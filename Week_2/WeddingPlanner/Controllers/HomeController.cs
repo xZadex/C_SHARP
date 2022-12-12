@@ -36,11 +36,11 @@ public class HomeController : Controller
     {
         User? User = _context.Users.FirstOrDefault(u => u.UserId == HttpContext.Session.GetInt32("UserId"));
         ViewBag.User = User;
-        // List<Wedding> AllWeddings = _context.Weddings.ToList();
+
         WeddingAssociation myAssociation = new WeddingAssociation();
         MyViewModel MyModel = new MyViewModel
         {
-            AllWeddings = _context.Weddings.ToList(),
+            AllWeddings = _context.Weddings.Include(u => u.GuestList).ThenInclude(u => u.User).ToList(),
             WeddingAssociation = myAssociation
         };
         return View(MyModel);
@@ -71,8 +71,8 @@ public class HomeController : Controller
 
         MyViewModel MyModel = new MyViewModel
         {
-            Wedding = _context.Weddings.FirstOrDefault(w => w.WeddingId == id),
-            WeddingAssociation = myAssociation
+            Wedding = _context.Weddings.Include(g => g.GuestList).ThenInclude(u => u.User).FirstOrDefault(w => w.WeddingId == id),
+            WeddingAssociation = myAssociation,
         };
         return View(MyModel);
     }
@@ -81,12 +81,15 @@ public class HomeController : Controller
     [HttpPost("weddings/new/create")]
     public IActionResult CreateWedding(Wedding newWedding)
     {
-        if(ModelState.IsValid)
+        if (ModelState.IsValid)
         {
             _context.Add(newWedding);
             _context.SaveChanges();
-            return RedirectToAction("Weddings");
-        } else {
+            int id = newWedding.WeddingId;
+            return RedirectToAction("ShowWedding", new { id = newWedding.WeddingId });
+        }
+        else
+        {
             User? User = _context.Users.FirstOrDefault(u => u.UserId == HttpContext.Session.GetInt32("UserId"));
             ViewBag.User = User;
             int? UserId = HttpContext.Session.GetInt32("UserId");
@@ -104,13 +107,24 @@ public class HomeController : Controller
         return RedirectToAction("Weddings");
     }
 
-
-    [HttpPost("associations/weddings/create")]
-    public IActionResult CreateAssociation(WeddingAssociation newGuest)
+    [HttpGet("associations/weddings/{id}/create")]
+    public IActionResult RSVP(int id)
     {
-            _context.Add(newGuest);
-            _context.SaveChanges();
-            return RedirectToAction("ShowProduct", new{UserId = newGuest.UserId, WeddingId = newGuest.WeddingId});
+        WeddingAssociation association = new WeddingAssociation();
+        association.UserId = (int)HttpContext.Session.GetInt32("UserId");
+        association.WeddingId = id;
+        _context.Add(association);
+        _context.SaveChanges();
+        return RedirectToAction("Weddings");
+    }
+
+    [HttpGet("associations/weddings/{id}/destroy")]
+    public IActionResult UNRSVP(int id)
+    {
+        WeddingAssociation? AssociationToDestroy = _context.WeddingAssociations.SingleOrDefault(d => d.WeddingId == id && d.UserId == HttpContext.Session.GetInt32("UserId"));
+        _context.WeddingAssociations.Remove(AssociationToDestroy);
+        _context.SaveChanges();
+        return RedirectToAction("Weddings");
     }
 
 

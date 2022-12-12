@@ -14,4 +14,6 @@ public class MyContext : DbContext
     // This is where we provide a plural version of our model to fit table naming standards    
     public DbSet<User> Users { get; set; }
     public DbSet<Wedding> Weddings {get; set;}
+
+    public DbSet<WeddingAssociation> WeddingAssociations {get;set;}
 }

@@ -27,9 +27,9 @@
     <h3 class="mt-4">Date: @Model.Wedding.WeddingDate</h3>
     <h3 class="mt-3">Guests:</h3>
     <ul class="list-unstyled mx-3" style="border:2px solid black; width: fit-content; padding: .25em 2em .25em .5em;">
-        @foreach(WeddingAssociation i in @Model.Wedding.GuestList)
+        @foreach(var guest in @Model.Wedding.GuestList)
         {
-            <li>@i.User.FirstName @i.User.LastName</li>
+            <li>@guest.User.FirstName @guest.User.LastName</li>
         }
     </ul>
 </main>
