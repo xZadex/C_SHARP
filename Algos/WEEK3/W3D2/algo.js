@@ -13,15 +13,6 @@ class MinHeap {
         return this.heap.length === 1 ? null : this.heap[this.heap.length - 1];
     }
 
-    /**
-     * Inserts a new number into the heap and maintains the heaps order.
-     * 1. Push new num to back then.
-     * 2. Iteratively swap the new num with it's parent while it is smaller than
-     *    it's parent.
-     * - Time: O(log n) logarithmic due to shiftUp / iterative swapping.
-     * - Space: O(1) constant.
-     * @param {number} num The num to add.
-     */
     insert(num) {
         this.heap.push(num);
 
@@ -36,10 +27,6 @@ class MinHeap {
         }
     }
 
-    /**
-     * Logs the tree horizontally with the root on the left and the index in
-     * parenthesis using reverse inorder traversal.
-     */
     printHorizontalTree(parentIdx = 1, spaceCnt = 0, spaceIncr = 10) {
         if (parentIdx > this.heap.length - 1) {
             return;
