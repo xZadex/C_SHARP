@@ -1,0 +1,29 @@
+@model MyViewModel
+<nav>
+    <div class="d-flex justify-content-between align-items-center mt-3">
+        <h2>Coding Dojo Wall</h2>
+        <div class="d-flex align-items-center justify-content-center gap-2">
+            <p class="m-0 p-0">Welcome @Context.Session.GetString("UserFirst")</p>
+            <div>
+            <form asp-action="Logout" asp-controller="Home" method="post">
+                <button class="m-0" style="background: none; border:none; color: #0D6EFD; text-decoration: underline;">Logout</button>
+            </form>
+            </div>
+        </div>
+    </div>
+    <div style="height: 2px; width: 100%; background-color: black; margin-top: 5px;"></div>
+</nav>
+<div class="d-flex flex-column justify-content-center align-items-center">
+    @await Html.PartialAsync("_PostMessage", Model.Message)
+</div>
+<div>
+    <ul class="list-unstyled">
+        @foreach(Message m in Model.AllMessages)
+        {
+            <li class="d-flex flex-column mt-4">
+                <strong>@m.Creator.FirstName @m.Creator.LastName[0] - @m.CreatedAt.ToString("MMMM d, yyyy")</strong>
+                <p class="mx-4 mt-2">@m.Content</p>
+            </li>
+        }
+    </ul>
+</div>

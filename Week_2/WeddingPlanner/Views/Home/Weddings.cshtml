@@ -54,16 +54,7 @@
                             }
                             else
                             {
-                                @* if(i.GuestList.Any(e => e.UserId == @Context.Session.GetInt32("UserId"))) *@
-                                bool inList = false;
-                                foreach (WeddingAssociation association in i.GuestList)
-                                {
-                                    if (association.User.UserId == @Context.Session.GetInt32("UserId"))
-                                    {
-                                        inList = true;
-                                    }
-                                }
-                                if (inList == true)
+                                if(i.GuestList.Any(e => e.UserId == @Context.Session.GetInt32("UserId")))
                                 {
                                     <form asp-action="UNRSVP" asp-controller="Home" asp-route-id="@i.WeddingId" method="post">
                                         <button style="border:none; background:none; margin:0; padding:0; color: rgb(0,0,0); text-decoration:underline;">Un-RSVP</button>
