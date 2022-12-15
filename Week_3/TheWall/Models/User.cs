@@ -37,7 +37,7 @@ public class User
 
     // navigation property
     public List<Message> CreatedMessages { get; set; } = new List<Message>();
-    
+    public List<Association> Comments {get;set;} = new List<Association>();
 }
 
 public class UniqueEmailAttribute : ValidationAttribute

@@ -7,4 +7,7 @@ public class MyViewModel
 
     public Message? Message {get;set;}
     public List<Message>? AllMessages {get;set;}
+
+    public Comment? Comment {get;set;}
+    public List<Comment>? AllComments {get;set;}
 }

@@ -31,7 +31,8 @@ public class HomeController : Controller
         WeddingAssociation myAssociation = new WeddingAssociation();
         MyViewModel MyModel = new MyViewModel
         {
-            AllWeddings = _context.Weddings.Include(u => u.GuestList).ThenInclude(u => u.User).ToList(),
+            AllWeddings = _context.Weddings.Include(u => u.GuestList)
+            .ThenInclude(u => u.User).ToList(),
             WeddingAssociation = myAssociation
         };
         return View(MyModel);
@@ -54,7 +55,8 @@ public class HomeController : Controller
 
         MyViewModel MyModel = new MyViewModel
         {
-            Wedding = _context.Weddings.Include(g => g.GuestList).ThenInclude(u => u.User).FirstOrDefault(w => w.WeddingId == id),
+            Wedding = _context.Weddings.Include(g => g.GuestList)
+            .ThenInclude(u => u.User).FirstOrDefault(w => w.WeddingId == id),
             WeddingAssociation = myAssociation,
         };
         return View(MyModel);

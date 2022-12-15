@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj": {}
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj": {}
   },
   "projects": {
-    "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj": {
+    "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj",
+        "projectUniqueName": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj",
         "projectName": "TheWall",
-        "projectPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj",
+        "projectPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\TheWall.csproj",
         "packagesPath": "C:\\Users\\gibso\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\obj\\",
+        "outputPath": "c:\\Users\\gibso\\Desktop\\C_SHARP\\Week_3\\TheWall\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\gibso\\AppData\\Roaming\\NuGet\\NuGet.Config"

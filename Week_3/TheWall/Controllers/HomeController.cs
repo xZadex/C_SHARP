@@ -88,7 +88,8 @@ public class HomeController : Controller
         ViewBag.UserId = HttpContext.Session.GetInt32("UserId");
         MyViewModel MyModel = new MyViewModel
         {
-            AllMessages = _context.Messages.Include(u => u.Creator).ToList()
+            AllMessages = _context.Messages.Include(u => u.Creator).ToList(),
+            AllComments = _context.Comments.Include(u => u.Users).ThenInclude(u => u.User).ToList()
         };
         return View(MyModel);
     }
@@ -99,6 +100,21 @@ public class HomeController : Controller
         if(ModelState.IsValid)
         {
             _context.Add(newMessage);
+            _context.SaveChanges();
+            return RedirectToAction("Success");
+        }
+        else
+        {
+            return View("Success");
+        }
+    }
+
+    [HttpPost("messages/{id}/comments/new")]
+    public IActionResult NewComment(int id,Comment newComment)
+    {
+        if(ModelState.IsValid)
+        {
+            _context.Add(newComment);
             _context.SaveChanges();
             return RedirectToAction("Success");
         }
