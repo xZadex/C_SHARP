@@ -12,31 +12,19 @@ class DoublyLinkedList {
         this.tail = null;
     }
 
-    /**
-     * Inserts a new node with the given newVal after the node that has the
-     * given targetVal as it's data.
-     * - Time: O(?).
-     * - Space: O(?).
-     * @param {any} targetVal The node data to find.
-     * @param {any} newVal Data for the new node.
-     * @returns {boolean} Indicates if the new node was added.
-     */
     insertAfter(targetVal, newVal) {
         let current = this.head;
         while (current) {
             if (current.data === targetVal) {
-                // Create the new node and set its next and prev properties.
                 const newNode = new ListNode(newVal);
                 newNode.prev = current;
                 newNode.next = current.next;
 
-                // Update the next and prev properties of the adjacent nodes.
                 if (current.next) {
                     current.next.prev = newNode;
                 }
                 current.next = newNode;
 
-                // If the new node is being inserted after the tail, update the tail.
                 if (current === this.tail) {
                     this.tail = newNode;
                 }
@@ -48,32 +36,19 @@ class DoublyLinkedList {
         return false;
     }
 
-
-    /**
-     * Inserts a new node with the given newVal before the node that has the
-     * given targetVal as it's data.
-     * - Time: O(?).
-     * - Space: O(?).
-     * @param {any} targetVal The node data to find.
-     * @param {any} newVal Data for the new node.
-     * @returns {boolean} Indicates if the new node was added.
-     */
     insertBefore(targetVal, newVal) {
         let current = this.head;
         while (current) {
             if (current.data === targetVal) {
-                // Create the new node and set its next and prev properties.
                 const newNode = new ListNode(newVal);
                 newNode.prev = current.prev;
                 newNode.next = current;
 
-                // Update the next and prev properties of the adjacent nodes.
                 if (current.prev) {
                     current.prev.next = newNode;
                 }
                 current.prev = newNode;
 
-                // If the new node is being inserted before the head, update the head.
                 if (current === this.head) {
                     this.head = newNode;
                 }
@@ -131,7 +106,6 @@ class DoublyLinkedList {
     }
 
     removeMiddleNode() {
-        // when there is only 1 node, it is the middle, remove it.
         if (!this.isEmpty() && this.head === this.tail) {
             const removedData = this.head.data;
             this.head = null;
@@ -197,8 +171,10 @@ const emptyList = new DoublyLinkedList();
 emptyList.insertAtFront(3);
 emptyList.insertAtFront(2);
 emptyList.insertAtFront(1);
-emptyList.insertBefore(1, 0)
-console.log("\nInsert Before:")
+emptyList.insertBefore(1, 0);
+console.log("");
+console.log("Insert Before:");
+console.log(emptyList.insertBefore(1, 0));
 emptyList.printValues();
 
 
@@ -207,7 +183,9 @@ singleNodeList.insertAtBack(1);
 singleNodeList.insertAtBack(2);
 singleNodeList.insertAtBack(3);
 singleNodeList.insertAfter(3, 4);
-console.log("\nInsert After:")
+console.log("");
+console.log("Insert After:")
+console.log(singleNodeList.insertAfter(5, 4));
 singleNodeList.printValues();
 
 /**************** Uncomment these test lists after insertAtBack is created. ****************/
