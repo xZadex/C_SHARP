@@ -22,7 +22,7 @@
                             </li>
                         }
                     </ul>
-                    @await Html.PartialAsync("_Comments", Model.Comment, new ViewDataDictionary { { "Key", "Value" } })
+                    @await Html.PartialAsync("_Comments", Model.Comment)
                 </div>
             </li>
         }
